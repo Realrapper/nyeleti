@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Little Birthday Surprise for Nyeleti ♡</title>
+<meta name="description" content="A small, personal birthday surprise for Nyeleti.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎂%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+<section id="intro" aria-label="Opening surprise">
+  <p class="hand">made just for you</p>
+  <h1>Happy Birthday, Nyeleti!</h1>
+  <p>Okay, I made you a little something…</p>
+  <div id="env" aria-hidden="true"><div class="flap"></div><div class="letter">♡</div><div class="front"></div></div>
+  <button id="openBtn" class="btn">Open your surprise ♡</button>
+</section>
+
+<main id="main" hidden>
+  <header class="hero sec">
+    <p class="hand">A Little Birthday Surprise for Nyeleti ♡</p>
+    <h2 class="big">Happy Birthday, Nyeleti ♡</h2>
+    <p class="lead" id="heroMsg"></p>
+    <p class="sub">Made for someone who makes ordinary moments a little more interesting.</p>
+    <a class="btn" href="#memories">See the memories</a>
+  </header>
+
+  <section id="memories" class="sec">
+    <p class="hand">little moments, good memories</p>
+    <h2>Our little scrapbook</h2>
+    <div id="memGrid"></div>
+  </section>
+
+  <section id="exhibit" class="sec case">
+    <p class="stamp">CASE FILE · EVIDENCE</p>
+    <h2 id="exTitle"></h2>
+    <figure class="evidence">
+      <video controls playsinline preload="metadata" poster="assets/images/video-poster.jpg" width="1080" height="1440">
+        <source src="assets/videos/skating-incident.mp4" type="video/mp4">
+        Your browser can't play this video.
+      </video>
+      <figcaption><p id="exCap"></p><span class="hand" id="exNote"></span></figcaption>
+    </figure>
+  </section>
+
+  <section id="memeSec" class="sec">
+    <p class="hand" id="memeHand"></p>
+    <h2 id="memeTitle"></h2>
+    <figure class="card meme">
+      <img id="memeImg" src="assets/images/meme.jpg" loading="lazy" decoding="async" alt="">
+      <figcaption id="memeCap"></figcaption>
+    </figure>
+  </section>
+
+  <section id="quizSec" class="sec">
+    <p class="hand">no wrong answers, promise</p>
+    <h2>How well do you know yourself?</h2>
+    <div class="card quiz" id="quiz" aria-live="polite"></div>
+  </section>
+
+  <section id="gameSec" class="sec">
+    <p class="hand">20 seconds. go.</p>
+    <h2>The Birthday Challenge</h2>
+    <div class="card gamebox">
+      <div class="hud"><span>Score: <b id="score">0</b></span><span>Time: <b id="time">20</b>s</span></div>
+      <canvas id="cv" width="320" height="400" tabindex="0" aria-label="Catch the treats game. Use left and right arrow keys, or drag."></canvas>
+      <div class="pad"><button class="btn ghost" id="bl" aria-label="Move left">◀</button><button class="btn" id="startBtn">Start</button><button class="btn ghost" id="br" aria-label="Move right">▶</button></div>
+      <p id="gameMsg" role="status"></p>
+      <p id="secret" class="secret" hidden></p>
+    </div>
+  </section>
+
+  <section id="dateSec" class="sec">
+    <p class="hand">purely hypothetical</p>
+    <h2>Choose our next adventure</h2>
+    <div class="card dategen">
+      <div id="dateCard" aria-live="polite">🎲 Press the button.</div>
+      <button class="btn" id="dateBtn">Surprise me 👀</button>
+      <p class="sub">Your move. We might actually have to make one of these happen.</p>
+    </div>
+  </section>
+
+  <section id="giftSec" class="sec">
+    <h2 id="giftTitle"></h2>
+    <div class="card gift"><div class="giftbox" aria-hidden="true">🎁</div><div id="giftText"></div></div>
+  </section>
+
+  <section id="letterSec" class="sec">
+    <h2>Okay, jokes aside…</h2>
+    <div class="card paper" id="letter"></div>
+    <button class="btn" id="lastBtn">One last thing…</button>
+  </section>
+
+  <section id="finale" class="sec" hidden>
+    <h2 class="big">Happy Birthday, Nyeleti ♡</h2>
+    <p class="lead">Here’s to more good food, questionable decisions, unnecessary competition, and memories worth keeping.</p>
+    <div class="cake" aria-hidden="true"><i class="flame"></i><i class="flame f2"></i><i class="flame f3"></i><div class="t1"></div><div class="t2"></div><div class="plate"></div></div>
+    <div class="ask">
+      <h3 id="askQ"></h3>
+      <div class="askbox" id="askBox"><button class="btn" id="yesBtn">Yes 👀</button><button class="btn ghost" id="noBtn">No</button></div>
+      <p id="askMsg" role="status"></p>
+    </div>
+    <button class="btn" id="replayBtn">Replay from the start</button>
+  </section>
+</main>
+
+<dialog id="lb"><button id="lbClose" class="btn" aria-label="Close photo">✕ Close</button><img id="lbImg" alt=""></dialog>
+<script src="script.js"></script>
+</body>
+</html>
